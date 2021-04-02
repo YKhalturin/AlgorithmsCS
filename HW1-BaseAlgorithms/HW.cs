@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace HW1_BaseAlgorithms
 {
@@ -58,9 +60,33 @@ namespace HW1_BaseAlgorithms
          * b. *без использования третьей переменной.
          */
 
+        static (int, int) ReverseValuesA(int a, int b)
+        {
+            var temp = a;
+            a = b;
+            b = temp;
+            return (a, b);
+        }
+
+        static (int, int) ReverseValuesB(int a, int b)
+        {
+            b = a + b;
+            a = b - a;
+            b = b - a;
+            return (a, b);
+        }
+
         public static void Task3()
         {
-
+            var a = 2;
+            var b = 9;
+            Console.WriteLine($"Иходные данные: a={a}, b={b}");
+            Console.WriteLine("Меняем значения двух переменных a И b...");
+            var tupleOptionA = ReverseValuesA(a, b);
+            Console.WriteLine($"Результат с использованием третьей переменной: a={tupleOptionA.Item1}, b={tupleOptionA.Item2}");
+            var tupleOptionB = ReverseValuesB(a, b);
+            Console.WriteLine($"Результат *без использования третьей переменной: a={tupleOptionB.Item1}, b={tupleOptionB.Item2}");
+            Console.ReadKey();
 
         }
 
