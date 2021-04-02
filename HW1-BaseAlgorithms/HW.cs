@@ -113,7 +113,6 @@ namespace HW1_BaseAlgorithms
             //double a = 1;
             //double b = -3;
             //double c = -4;
-
             double a = GetValue("Введите коэффициент a: ");
             double b = GetValue("Введите коэффициент b: ");
             double c = GetValue("Введите коэффициент c: ");
