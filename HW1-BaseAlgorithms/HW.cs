@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
 
 namespace HW1_BaseAlgorithms
 {
@@ -94,10 +92,38 @@ namespace HW1_BaseAlgorithms
          * 4. Написать программу нахождения корней заданного квадратного уравнения.
          */
 
+        public static double GetValue(string str)
+        {
+            Console.WriteLine(str);
+            string input = Console.ReadLine();
+            double d;
+            if (!Double.TryParse(input, out d))  Console.WriteLine("Ввведено значение не типа 'Double'");
+            return d;
+        }
+
+        // true == '+', false == '-'
+        public static double QuadraticSolution(double a, double b, double c, bool sign)
+        {
+            double d = b * b - 4 * a * c;
+            return sign ? (-b + Math.Sqrt(d)) / 2 * a : (-b - Math.Sqrt(d)) / 2 * a;
+        }
+
         public static void Task4()
         {
+            //double a = 1;
+            //double b = -3;
+            //double c = -4;
 
+            double a = GetValue("Введите коэффициент a: ");
+            double b = GetValue("Введите коэффициент b: ");
+            double c = GetValue("Введите коэффициент c: ");
 
+            Console.WriteLine($"Решим квадратное уравнение вида: {a}x*x + {b}x + {c} = 0");
+
+            var x1 = QuadraticSolution(a, b, c, true);
+            var x2 = QuadraticSolution(a, b, c, false);
+
+            Console.WriteLine($"Ответ: x1 = {x1:F1}, x2 = {x2:F1}");
         }
 
     }
