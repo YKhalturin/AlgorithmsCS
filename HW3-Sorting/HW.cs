@@ -8,39 +8,88 @@ namespace HW3_Sorting
 {
     partial class HW
     {
-        public class MyMultiArray
+        public class MyArray
         {
-            public int[,] a;
-            public int[,] FillArray(int i, int j)
+            public int[] a;
+            public int Count = 0;
+
+            public int[] FillArray(int i)
             {
-                a = new int[i, j];
+                a = new int[i];
                 Random r = new Random();
                 for (i = 0; i < a.GetLength(0); i++)
                 {
-                    for (j = 0; j < a.GetLength(1); j++)
-                    {
-                        a[i, j] = r.Next(1, 100);
-                    }
+                    a[i] = r.Next(1, 100);
                 }
                 return a;
             }
 
-            public MyMultiArray(int i, int j)
+            public MyArray(int n)
             {
-                Console.WriteLine($"Создаем массив. Размерность a[{i},{j}]");
-                FillArray(i, j);
+                Console.WriteLine($"Создаем массив. Размерность a[{n}]");
+                FillArray(n);
             }
 
-            public void Print()
+            public void Print(string s)
             {
-                Console.WriteLine("Печатаем массив: ");
+                Console.WriteLine(s);
                 for (int i = 0; i < a.GetLength(0); i++)
                 {
-                    for (int j = 0; j < a.GetLength(1); j++)
-                        Console.Write("{0,5}", a[i, j]);
-                    Console.WriteLine();
+                    Console.Write("{0,5}", a[i]);
                 }
                 Console.WriteLine();
+            }
+
+            (int, int) Swap(int a, int b)
+            {
+                int tmp = a;
+                a = b;
+                b = tmp;
+                return (a, b);
+            }
+
+            public int[] BubbleSort(int[] arr)
+            {
+                //int count = 0;
+                for (int i = arr.Length - 1; i > 0; i--)
+                {
+                    for (int j = 0; j < i; j++)
+                    {
+                        Count++;
+                        if (arr[j] > arr[j + 1])
+                        {
+                            Count++;
+                            (arr[j], arr[j + 1]) = Swap(arr[j], arr[j + 1]);
+                        }
+                    }
+                }
+                return arr;
+            }
+
+           public int[] ShakerSort(int[] arr)
+           {
+               for (int i = arr.Length - 1; i > 0; i -= 2)
+               {
+                   for (int j = 0; j < i; j++)
+                   {
+                       Count++;
+                       if (arr[j] > arr[j + 1])
+                       {
+                           Count++;
+                            (arr[j], arr[j + 1]) = Swap(arr[j], arr[j + 1]);
+                       }
+                   }
+                   for (int j = arr.Length - 1; j > 1; j--)
+                   {
+                       Count++;
+                       if (arr[j] < arr[j - 1])
+                       {
+                           Count++;
+                            (arr[j], arr[j - 1]) = Swap(arr[j], arr[j - 1]);
+                       }
+                   }
+               }
+               return arr;
             }
         }
 
@@ -51,8 +100,11 @@ namespace HW3_Sorting
      */
     public static void Task1()
         {
-            MyMultiArray myMultiArray = new MyMultiArray(3, 4);
-            myMultiArray.Print();
+            MyArray myArray = new MyArray(10);
+            myArray.Print("Печатаем исходный массив: ");
+            myArray.BubbleSort(myArray.a);
+            myArray.Print($"Печатаем отсортированный массив (пузырьковая сортировка), количество операций = {myArray.Count}");
+
         }
 
         /*
@@ -61,7 +113,10 @@ namespace HW3_Sorting
 
         public static void Task2()
         {
-
+            MyArray myArray = new MyArray(10);
+            myArray.Print("Печатаем исходный массив: ");
+            myArray.ShakerSort(myArray.a);
+            myArray.Print($"Печатаем отсортированный массив (шейкерная сортировка), количество операций = {myArray.Count}");
         }
 
         /*
