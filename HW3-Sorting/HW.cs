@@ -13,11 +13,11 @@ namespace HW3_Sorting
             public int[] a;
             public int Count = 0;
 
-            public int[] FillArray(int i)
+            public int[] FillArray(int n)
             {
-                a = new int[i];
+                a = new int[n];
                 Random r = new Random();
-                for (i = 0; i < a.GetLength(0); i++)
+                for (int i = 0; i < a.GetLength(0); i++)
                 {
                     a[i] = r.Next(1, 100);
                 }
@@ -91,6 +91,36 @@ namespace HW3_Sorting
                }
                return arr;
             }
+
+           public int BinarySearch(int[] arr, int value)
+           {
+                int l = 0;
+                int r = arr.Length - 1;
+                int m = l + (r - l) / 2;
+                while ((l < r) && (arr[m] != value))
+                {
+                    if (a[m] < value)
+                    {
+                        l = m + 1;
+                    }
+                    else
+                    {
+                        r = m - 1;
+                    }
+                    m = l + (r - l) / 2;
+                }
+
+                if (a[m] == value)
+                {
+                    Console.WriteLine($"Искомое значение {value} найдено под индексом a[{m}]");
+                    return value;
+                }
+                else
+                {
+                    Console.WriteLine($"Искомое значение {value} не найдено в массиве");
+                    return -1;
+                }
+           }
         }
 
 
@@ -126,6 +156,11 @@ namespace HW3_Sorting
 
         public static void Task3()
         {
+            MyArray myArray = new MyArray(20);
+            myArray.Print("Печатаем исходный массив: ");
+            myArray.ShakerSort(myArray.a);
+            myArray.Print($"Печатаем отсортированный массив (шейкерная сортировка)");
+            myArray.BinarySearch(myArray.a, 55);
 
         }
 
