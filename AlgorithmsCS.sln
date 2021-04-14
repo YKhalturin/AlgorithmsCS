@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW1-BaseAlgorithms", "HW1-BaseAlgorithms\HW1-BaseAlgorithms.csproj", "{E4FECAE9-94CA-49E5-A881-BB8335E57DDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW2-Recursion", "HW2-Recursion\HW2-Recursion.csproj", "{5BF5CD32-C5DA-4D6E-B1EA-4FCEE7D1CF36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW2-Recursion", "HW2-Recursion\HW2-Recursion.csproj", "{5BF5CD32-C5DA-4D6E-B1EA-4FCEE7D1CF36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{1718A5D2-96C1-43E8-817E-708E44C6CD26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helper", "Helper\Helper.csproj", "{1718A5D2-96C1-43E8-817E-708E44C6CD26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW3-Sorting", "HW3-Sorting\HW3-Sorting.csproj", "{5AF7E4CF-C0C0-44BC-8920-B1A2537670F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{1718A5D2-96C1-43E8-817E-708E44C6CD26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1718A5D2-96C1-43E8-817E-708E44C6CD26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1718A5D2-96C1-43E8-817E-708E44C6CD26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AF7E4CF-C0C0-44BC-8920-B1A2537670F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AF7E4CF-C0C0-44BC-8920-B1A2537670F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AF7E4CF-C0C0-44BC-8920-B1A2537670F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AF7E4CF-C0C0-44BC-8920-B1A2537670F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
