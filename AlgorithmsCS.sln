@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helper", "Helper\Helper.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW3-Sorting", "HW3-Sorting\HW3-Sorting.csproj", "{5AF7E4CF-C0C0-44BC-8920-B1A2537670F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW4-Dynamic", "HW4\HW4-Dynamic.csproj", "{4FAA1CC8-D0DE-4617-9E89-06052A619105}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW4-Dynamic", "HW4\HW4-Dynamic.csproj", "{4FAA1CC8-D0DE-4617-9E89-06052A619105}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW5-DynamicStructure", "HW5-DynamicStructure\HW5-DynamicStructure.csproj", "{F4FA1D77-D726-40E8-8BD2-F9124795D6B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{4FAA1CC8-D0DE-4617-9E89-06052A619105}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FAA1CC8-D0DE-4617-9E89-06052A619105}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FAA1CC8-D0DE-4617-9E89-06052A619105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4FA1D77-D726-40E8-8BD2-F9124795D6B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4FA1D77-D726-40E8-8BD2-F9124795D6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4FA1D77-D726-40E8-8BD2-F9124795D6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4FA1D77-D726-40E8-8BD2-F9124795D6B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
