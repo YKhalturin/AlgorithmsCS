@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW5-DynamicStructure", "HW5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW6-Trees", "HW6-Trees\HW6-Trees.csproj", "{25B98935-852E-4E3D-A704-349A37081196}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW7-Graphs", "HW7-Graphs\HW7-Graphs.csproj", "{2C1B480E-DB09-4507-B260-7F7E0689A241}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW7-Graphs", "HW7-Graphs\HW7-Graphs.csproj", "{2C1B480E-DB09-4507-B260-7F7E0689A241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW8-ComplexSorting", "HW8-ComplexSorting\HW8-ComplexSorting.csproj", "{370DAD76-66EC-40AD-93BE-966647F4A651}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{2C1B480E-DB09-4507-B260-7F7E0689A241}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C1B480E-DB09-4507-B260-7F7E0689A241}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C1B480E-DB09-4507-B260-7F7E0689A241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{370DAD76-66EC-40AD-93BE-966647F4A651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{370DAD76-66EC-40AD-93BE-966647F4A651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{370DAD76-66EC-40AD-93BE-966647F4A651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{370DAD76-66EC-40AD-93BE-966647F4A651}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
